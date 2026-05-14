@@ -63,7 +63,12 @@ function CreateOrder() {
         <div>
           <label>Address</label>
           <div>
-            <input type="text" name="address" required />
+            <input
+              className="rounded-full border border-stone-200 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-500 focus:outline-none focus:ring w-full md:px-6 md:py-3 focus:ring-yellow-400"
+              type="text"
+              name="address"
+              required
+            />
           </div>
         </div>
 
@@ -74,13 +79,17 @@ function CreateOrder() {
             id="priority"
             // value={withPriority}
             // onChange={(e) => setWithPriority(e.target.checked)}
+            className="h-6 w-6 accent-yellow-400 focus:ring focus:outline-none focus:ring-yellow-300 focus:ring-offset-2"
           />
           <label htmlFor="priority">Want to yo give your order priority?</label>
         </div>
 
         <div>
           <input type="hidden" name="cart" value={JSON.stringify(cart)} />
-          <button disabled={isSubmitting}>
+          <button
+            disabled={isSubmitting}
+            className="bg-yellow-400 focus:outline-none disabled:cursor-not-allowed uppercase font-semibold text-stone-800 py-3 px-4 inline-block tracking-wide rounded-full hover:bg-yellow-300 transition-colors duration-300  focus:bg-yellow-300 focus:ring  focus:ring-yellow-300 focus:ring-offset-2"
+          >
             {isSubmitting ? "Placing order..." : "Order now"}
           </button>
         </div>
