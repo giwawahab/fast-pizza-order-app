@@ -1,10 +1,9 @@
-import {createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 // function getPosition() {
 //   return new Promise(function (resolve, reject) {
 //     navigator.geolocation.getCurrentPosition(resolve, reject);
 //   });
 // }
-
 
 // async function fetchAddress() {
 //   // 1) We get the user's geolocation position
@@ -38,3 +37,5 @@ const userSlice = createSlice({
 
 export const { updateName } = userSlice.actions;
 export default userSlice.reducer;
+
+export const getUsername = (state) => state.user.username;
